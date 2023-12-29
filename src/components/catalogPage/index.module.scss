@@ -1,0 +1,106 @@
+@import '../../styles/utils/breakpoints';
+
+.container {
+  display: flex;
+  justify-content: center;
+  .mainContainer {
+    max-width: 1100px;
+    width: 100%;
+    margin: 20px;
+    .linkContainer {
+      a {
+        color: #2c6ecb;
+        cursor: pointer;
+      }
+      span {
+        text-transform: capitalize;
+      }
+    }
+    .header {
+      margin: 30px 0;
+      padding: 40px;
+      width: 100%;
+      background: #685f58;
+      h2 {
+        margin-top: 30px;
+        color: #fff;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+
+    .catalog {
+      .catalogHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .shopBy {
+          font-weight: 600;
+        }
+
+        .sortContainer {
+          display: flex;
+          align-items: center;
+          img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+          }
+          .rotate {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .ProductsContainer {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .filters {
+          width: 24%;
+        }
+        .products {
+          width: 75%;
+          display: grid;
+          gap: 20px;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .noDataFound{
+          display: flex;
+          width: 75%;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .paginationContainer{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@include media-medium {
+  .container {
+    .mainContainer {
+      .catalog {
+        .catalogHeader {
+          .shopBy {
+            display: none;
+          }
+        }
+        .ProductsContainer {
+          .products {
+            width: 100%;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+          .filters {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

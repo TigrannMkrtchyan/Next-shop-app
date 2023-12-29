@@ -1,0 +1,133 @@
+@import '../../styles/utils/breakpoints';
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  .contentContainer {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+
+    .badLink {
+      width: 100%;
+      min-height: 500px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1{
+        font-size: 38px;
+      a{color:#2c6ecb ;}
+      }
+    }
+
+    .linkContainer {
+      display: flex;
+      column-gap: 5px;
+      margin-bottom: 10px;
+      .link {
+        text-transform: capitalize;
+        color: #2c6ecb;
+      }
+    }
+    .productContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      column-gap: 2%;
+      .imagesContainer {
+        width: 49%;
+        .mainImage {
+          width: 100%;
+          background-color: rgb(246, 246, 246);
+          height: 530px;
+        }
+        .images {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          display: grid;
+          gap: 10px;
+          img {
+            cursor: pointer;
+            width: 100%;
+            max-width: 100%;
+            max-height: 130px;
+          }
+        }
+      }
+      .details {
+        width: 49%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        h1 {
+          font-size: 34px;
+          text-transform: capitalize;
+          line-height: 45px;
+        }
+
+        .PropertyList {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+          p {
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+
+        .price {
+          font-size: 20px;
+        }
+
+        .code {
+          color: #737373;
+        }
+
+        .add {
+          width: 100%;
+          border: 1px solid #000000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 12px 0;
+          cursor: pointer;
+          font-size: 14px;
+        }
+
+        .addDisabled {
+          opacity: 0.5;
+        }
+
+        .propertyContainer {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          column-gap: 10px;
+        }
+
+        .error {
+          color: #ff0000;
+        }
+      }
+    }
+  }
+}
+
+@include media-medium {
+  .mainContainer {
+    .contentContainer {
+      .productContainer {
+        column-gap: 0;
+        display: block;
+        .imagesContainer {
+          width: 100%;
+        }
+        .details {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

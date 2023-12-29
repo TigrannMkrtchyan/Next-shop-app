@@ -1,0 +1,26 @@
+.button {
+  background-color: #635bff;
+  background: #635bff;
+  border-radius: 3px;
+  color: white;
+  border: 0;
+  padding: 12px 16px;
+  margin-top: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: block;
+
+  &:hover {
+    filter: contrast(115%);
+  }
+
+  &:active {
+    transform: translateY(0px) scale(0.98);
+    filter: brightness(0.9);
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: none;
+  }
+}

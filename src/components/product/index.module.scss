@@ -1,0 +1,16 @@
+.mainContainer {
+  width: 100%;
+  .imageWarper {
+    img {
+      width: 100%;
+      background-color: #f5f5f5;
+      max-height: 260px;
+      height: 100%;
+    }
+  }
+  .content {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+}

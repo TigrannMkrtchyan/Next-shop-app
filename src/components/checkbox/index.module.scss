@@ -1,0 +1,78 @@
+@import '../../styles/utils/breakpoints';
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 10px;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .checkBox {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    padding-left: 0 !important;
+    height: 0;
+    width: 0;
+
+    & + .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 15px;
+      width: 15px;
+      background-color: #eee;
+      border: 1px solid #d4d4d4;
+      border-radius: 1px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: none;
+        height: 7px;
+        left: 4px;
+        top: 0px;
+        width: 3px;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    &:checked + .checkmark {
+      border: 1px solid #000000;
+      background-color: #000000;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+@include media-small {
+  .container {
+    margin-top: -1px;
+    width: 15px;
+    height: 15px;
+    .checkBox {
+      width: 15px !important;
+      height: 15px !important;
+      & + .checkmark {
+        height: 15px;
+        width: 15px;
+        &:after {
+          left: 5px;
+          top: 2px;
+          width: 3px;
+          height: 6px;
+        }
+      }
+    }
+  }
+}

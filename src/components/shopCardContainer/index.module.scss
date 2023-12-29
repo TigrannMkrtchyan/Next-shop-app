@@ -1,0 +1,25 @@
+@import '../../styles/utils/breakpoints';
+
+.shopCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .shopCardContainer {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 16px 55px;
+    max-width: 1300px;
+  }
+}
+
+@include media-medium {
+  .shopCards {
+    .shopCardContainer {
+      display: block;
+      padding: 16px;
+
+    }
+  }
+}

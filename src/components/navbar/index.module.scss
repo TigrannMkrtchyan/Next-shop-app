@@ -1,0 +1,82 @@
+@import '../../styles/utils/breakpoints';
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mainContainer {
+  padding: 25px;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #ebebeb;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logoIcon {
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+    }
+
+    .linkContainer {
+      display: flex;
+      flex-direction: row;
+      column-gap: 10px;
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .iconContainer {
+      display: flex;
+      column-gap: 10px;
+      img {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+      }
+      .menuIcon {
+        display: none;
+      }
+    }
+  }
+  .mobileNavbar {
+    display: none;
+    flex-direction: column;
+
+    .mobileLinkContainer {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      margin-top: 15px;
+    }
+  }
+}
+
+.children {
+  height: 100%;
+}
+
+@include media-medium {
+  .mainContainer {
+    .navbar {
+      .linkContainer {
+        display: none;
+      }
+      .iconContainer {
+        .menuIcon {
+          display: block;
+        }
+      }
+    }
+    .mobileNavbar {
+      display: flex;
+    }
+  }
+}

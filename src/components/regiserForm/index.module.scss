@@ -1,0 +1,20 @@
+.mainContainer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  
+  .links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  
+    .link {
+      color: #2c6ecb;
+    }
+  }
+  

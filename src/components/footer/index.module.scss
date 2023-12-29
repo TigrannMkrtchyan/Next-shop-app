@@ -1,0 +1,33 @@
+@import '../../styles/utils/breakpoints';
+
+.mainContainer {
+  background-color: #f6f6f6;
+  margin-top: 9rem;
+  padding-top: 1rem;
+  padding-block-end: 1rem;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .footer {
+    padding: 0 35px;
+    width: 100%;
+    max-width: 1200px;
+
+    .iconContainer {
+      display: flex;
+      column-gap: 10px;
+    }
+  }
+}
+
+@include media-medium {
+  .mainContainer {
+    .footer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

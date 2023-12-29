@@ -1,0 +1,13 @@
+.mainContainer {
+  margin: 30px 0px;
+  p {
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+  }
+
+  .rangeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

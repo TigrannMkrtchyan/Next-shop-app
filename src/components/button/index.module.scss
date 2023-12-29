@@ -1,0 +1,17 @@
+.button {
+  all: unset;
+  width: 100%;
+  background-color: #3a3a3a;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 4px;
+  &:focus {
+    outline: revert;
+  }
+  &:hover {
+    background-color: #008060;
+  }
+}
